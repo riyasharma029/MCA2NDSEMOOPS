@@ -1,0 +1,161 @@
+CODE 1 :
+class Student {
+  
+    private int rollNumber;
+    private String phoneNumber;
+    private String address;
+    
+    
+    public Student(int rollNumber, String phoneNumber, String address) {
+        this.rollNumber = rollNumber;
+        this.phoneNumber = phoneNumber;
+        this.address = address;
+    }
+    
+   
+    public void printStudentInfo() {
+        System.out.println("Roll Number: " + rollNumber);
+        System.out.println("Phone Number: " + phoneNumber);
+        System.out.println("Address: " + address);
+    }
+}
+
+public class main {
+    public static void main(String[] args) {
+        
+        Student sam = new Student(101, "910-456-7890", "sector 1 malviya nagar");
+        Student john = new Student(102, "987-654-3210", "mansarovar");
+        
+        // Print information for both students
+        System.out.println("Information for Sam:");
+        sam.printStudentInfo();
+        
+        System.out.println("\nInformation for John:");
+        john.printStudentInfo();
+    }
+}
+
+
+CODE 2 :
+
+class Calculator {
+   
+     int num1, num2;
+    
+    
+    public Calculator() {
+        num1 = 0;
+        num2 = 0;
+    }
+    
+    
+    public int add() {
+        return num1 + num2;
+    }
+    
+    
+    public int multiply() {
+        return num1 * num2;
+    }
+    
+    
+    public int add(int a, int b) {
+        return a + b;
+    }
+    
+    
+    public int multiply(int a, int b) {
+        return a * b;
+    }
+}
+
+public class Testapp {
+    public static void main(String[] args) {
+        
+        Calculator calculator = new Calculator();
+        
+        // Set values for num1 and num2
+        calculator.num1 = 5;
+        calculator.num2 = 3;
+        
+        // Call functions and display results
+        System.out.println("Addition: " + calculator.add());
+        System.out.println("Multiplication: " + calculator.multiply());
+        
+        // Call overloaded functions and display results
+        System.out.println("Overloaded Addition: " + calculator.add(7, 2));
+        System.out.println("Overloaded Multiplication: " + calculator.multiply(4, 6));
+    }
+}
+
+
+
+CODE 3 :
+class MyClass {
+     int value;
+
+    
+    public MyClass() {
+        value = 0;
+    }
+
+    // Parameterized constructor
+    public MyClass(int val) {
+        value = val;
+    }
+
+    // Method to display the value
+    public void display() {
+        System.out.println("Value: " + value);
+    }
+
+    // Overloaded method to display the sum of two values
+    public void display(int num1, int num2) {
+        System.out.println("Sum: " + (num1 + num2));
+    }
+
+    // Overloaded method to display the product of two values
+    public void display(double num1, double num2) {
+        System.out.println("Product: " + (num1 * num2));
+    }
+}
+
+public class overloading_eg {
+    public static void main(String[] args) {
+        // Using constructors
+        MyClass obj1 = new MyClass(); 
+        MyClass obj2 = new MyClass(4); 
+
+        // Using methods
+        obj1.display(); 
+        obj2.display(); 
+        obj1.display(3, 2); 
+        obj2.display(2.5, 7.9);
+    }
+}
+
+
+CODE 4 :
+
+public class bird{
+    String b1;
+    String b2;
+    bird(String b1){
+        this.b1=b1;
+        
+    }
+    void display(){
+        System.out.println(b1);
+        
+    }
+    
+}
+ class ass3 {
+    public static void main(String[] args) {
+        bird obj= new bird("pigeon");
+        bird obj2=new bird("Parrot");
+        obj.display();
+        obj2.display();
+
+    }
+}
